@@ -12,3 +12,7 @@ def get_residual_sum_of_squares(model, data, outcome):
     RSS = error_y2.sum()
 
     return(RSS)    
+    
+model_1_features = ['sqft_living', 'bedrooms', 'bathrooms', 'lat', 'long']
+model_2_features = model_1_features + ['bed_bath_rooms']
+model_3_features = model_2_features + ['bedrooms_squared', 'log_sqft_living', 'lat_plus_long']
